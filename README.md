@@ -32,7 +32,7 @@ to apply the combining and minification into two helper functions as follows:
 ```
 
 This would result for example in the following (or similar) output in your html:
-```html
+```php
 <script type="text/javascript" src="/index.php/tools/packages/mainio_minco/min?k=0caf9ce48d3ad9bcac4026d7a4d4b7d7"></script>
 <link rel="stylesheet" type="text/css" href="/index.php/tools/packages/mainio_minco/min?k=613d6d8d13122913c2c73d89778511c1" />
 ```
