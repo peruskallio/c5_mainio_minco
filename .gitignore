@@ -1,0 +1,7 @@
+*.class
+*.pyc
+*.pyo
+
+# Aptana
+.settings/**
+.project
