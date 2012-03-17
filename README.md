@@ -43,6 +43,7 @@ files specified between the minco block.
 
 The two arguments passed to the minco block starting function are optional but suggested to be used.
 The arguments are meant for cache-related functionality and refer to the following items:
+
 * First argument (in the example 'layout_resources'): Unique cache ID for this block
   * Used to save/get this minified block contents from server-side cache
 * Second argument (in the example 1): The file version
@@ -59,6 +60,7 @@ For example in the example presented above, there is no risk of having different
 different pages loaded inside the Mainio MinCo block, so in these kinds of situations you
 might want to save the combined and minified file into static assets files. Before doing
 this, you should make sure:
+
 1. That your server process is allowed to write into the template files where you've
    included the Minco::start() and Minco::end() functions
 2. You should also have both of these function calls in their own lines without anything
@@ -104,6 +106,7 @@ some external location. The files in external locations are not included in the
 combined css/js files and are left un-touched.
 
 The order of the files resources from the original HTML are the following:
+
 1. Everything that wasn't found to be a css/js file loaded from this site, excluding IE conditional statements
 2. Inline javascript that contains concrete-specific global variables starting with var CCM_...
 3. All the js files loaded from your site combined into a single file
@@ -127,6 +130,7 @@ define('CONF_NAME', 'conf_value');
 ```
 
 The boolean configurations are the following (true/false):
+
 * MINCO_USE_CDN_RESOURCES: determines whether to use CDN resources, defaults to true
 * MINCO_BYPASS_CACHE: Bypasses all server-side cache for all minco related cachable resources, defaults to false
 * MINCO_CLIENT_CACHE: Determines whether to tell the client browser to cache the resources, defaults to true
