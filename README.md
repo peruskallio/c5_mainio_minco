@@ -72,6 +72,26 @@ To do this, you need to modify the block ending function to this:
 <?php MincoBlock::end(true) ?>
 ```
 
+With this applied into your theme you will end up with your original Mainio MinCo block
+wrapped in a PHP statement that will never be true and above that you will have the
+minified and combined content. For instance, the example above might look something
+like this after requesting the page for the first time with MincoBlock::end(true)
+in place:
+
+```php
+<script type="text/javascript" src="/files/tmp/mainio_minco_combined_assets/0caf9ce48d3ad9bcac4026d7a4d4b7d7.js"></script>
+<link rel="stylesheet" type="text/css" href="/files/tmp/mainio_minco_combined_assets/613d6d8d13122913c2c73d89778511c1.css" />
+<?php if(false): MincoBlock::start('layout_resources', 1) ?>
+<script type="text/javascript" src="<?php echo View::getInstance()->getThemePath() ?>/js/cufon-yui.js"></script>
+<link rel="stylesheet" type="text/css" href="<?php echo $this->getStyleSheet('style/reset.css') ?>" />
+<link rel="stylesheet" type="text/css" href="<?php echo $this->getStyleSheet('style/mystyles.css') ?>" />
+<link rel="stylesheet" type="text/css" href="<?php echo $this->getStyleSheet('style/block_overrides.css') ?>" />
+<script type="text/javascript" src="<?php echo View::getInstance()->getThemePath() ?>/js/my_awesome_unminified_script.js"></script>
+<link rel="stylesheet" type="text/css" href="<?php echo $this->getStyleSheet('typography.css') ?>" />
+<?php MincoBlock::end(); endif; ?>
+```
+
+
 ## Applying the Mainio MinCo block ##
 You can apply the block starting and ending functions to any place in your theme. However,
 it is not suggested to wrap the whole contents of your theme into a single minco block 
