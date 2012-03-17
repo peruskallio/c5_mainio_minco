@@ -32,6 +32,7 @@ to apply the combining and minification into two helper functions as follows:
 ```
 
 This would result for example in the following (or similar) output in your html:
+
 ```php
 <script type="text/javascript" src="/index.php/tools/packages/mainio_minco/min?k=0caf9ce48d3ad9bcac4026d7a4d4b7d7"></script>
 <link rel="stylesheet" type="text/css" href="/index.php/tools/packages/mainio_minco/min?k=613d6d8d13122913c2c73d89778511c1" />
@@ -66,6 +67,7 @@ this, you should make sure:
 After you've made sure both of these requirements are fulfilled, you can let Mainio MinCo
 to combine, minify and save the files into static assets files during the next request.
 To do this, you need to modify the block ending function to this:
+
 ```php
 <?php MincoBlock::end(true) ?>
 ```
@@ -99,9 +101,11 @@ location to speed up the site loading for the users.
 ## Options ##
 The add-on is designed to be highly configurable and currently these configurations can be changed
 in your config/site.php by defining them to PHP constants:
+
 ```php
 define('CONF_NAME', 'conf_value');
 ```
+
 The boolean configurations are the following (true/false):
 * MINCO_USE_CDN_RESOURCES: determines whether to use CDN resources, defaults to true
 * MINCO_BYPASS_CACHE: Bypasses all server-side cache for all minco related cachable resources, defaults to false
