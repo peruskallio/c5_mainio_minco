@@ -108,11 +108,14 @@ combined css/js files and are left un-touched.
 The order of the files resources from the original HTML are the following:
 
 1. Everything that wasn't found to be a css/js file loaded from this site, excluding IE conditional statements
-2. Inline javascript that contains concrete-specific global variables starting with var CCM_...
-3. All the js files loaded from your site combined into a single file
-4. Inline javascript that doesn't contain concrete-specific global variables, e.g. $(document).ready();
-5. Inline CSS specific inside the block
-6. All the css files loaded from your site combined into a single file
+2. Inline JavaScript that contains concrete-specific global variables starting with var CCM_...
+3. CDN JS resources (if any found)
+4. All the JS files loaded from your site combined into a single file
+5. Inline JavaScript that doesn't contain concrete-specific global variables, e.g. $(document).ready();
+6. Inline CSS specified inside the block
+7. CDN CSS resources (if any found)
+8. All the CSS files loaded from your site combined into a single file
+9. IE conditional statements
 
 
 ## CDN resources ##
