@@ -93,6 +93,17 @@ in place:
 <?php MincoBlock::end(); endif; ?>
 ```
 
+When you want to re-compile the assets, just remove these parts before and after the minco block:
+
+```php
+// From the start of the Mainio MinCo block, remove this:
+if(false):
+// From the end of the Mainio MinCo block, remove this:
+endif;
+```
+
+When recompiling, also please remember to increment the file version number to avoid loading the
+combined parts from cache.
 
 ## Applying the Mainio MinCo block ##
 You can apply the block starting and ending functions to any place in your theme. However,
