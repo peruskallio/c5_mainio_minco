@@ -92,7 +92,7 @@ in place:
 <link rel="stylesheet" type="text/css" href="<?php echo $this->getStyleSheet('style/block_overrides.css') ?>" />
 <script type="text/javascript" src="<?php echo View::getInstance()->getThemePath() ?>/js/my_awesome_unminified_script.js"></script>
 <link rel="stylesheet" type="text/css" href="<?php echo $this->getStyleSheet('typography.css') ?>" />
-<?php MincoBlock::end(); endif; ?>
+<?php MincoBlock::end(true); endif; ?>
 ```
 
 When you want to re-compile the assets, just remove these parts before and after the minco block:
