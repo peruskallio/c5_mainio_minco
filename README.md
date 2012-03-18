@@ -5,8 +5,10 @@ The original author of this add-on is:
 Antti Hukkanen <antti.hukkanen@mainiotech.fi>
 
 The add-on's name stands for Minify and Combine static resources on your site.
-This add-on is meant for developers for easy minification and combination
-of CSS files in concrete5 themes.
+This add-on is meant for developers/theme developers for easy minification 
+and combination of CSS files in concrete5 themes. Minifying and combining
+the static assets usually improves the site performance and can be used
+to optimize the concrete5 site you're working on.
 
 Note: If you don't have any cache library (e.g. apc/memcached) installed and
 in use with your concrete5 installation, this add-on will probably lower the
