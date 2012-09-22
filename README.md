@@ -18,6 +18,10 @@ For minifying the source files this add-on uses the PHP-based Minify library:
 https://github.com/mrclay/minify
 
 # Usage #
+To install this package to concrete5, please download the desired branch as zip file
+and extract that to your site's /packages folder. After that, remember to rename
+the folder to "mainio_minco" after which it can be installed through your dashboard.
+
 After installing this, you can apply the css/js combining and minifying pretty easily
 in your themes. The only thing you need to do is to wrap the lines for which you want 
 to apply the combining and minification into two helper functions as follows:
