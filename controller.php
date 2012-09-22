@@ -28,6 +28,9 @@ class MainioMincoPackage extends Package {
 		// Minifier requires this one because of its internal inclusions
 		set_include_path(MINCO_MINIFY_LIB_DIR . PATH_SEPARATOR . get_include_path());
 		
+		if (!defined('DIR_TMP')) {
+			define('DIR_TMP', Loader::helper('file')->getTemporaryDirectory());
+		}
 		if (!defined('MINCO_RESOURCES_SAVE_DIR')) {
 			define('MINCO_RESOURCES_SAVE_DIR', DIR_TMP);
 		}
